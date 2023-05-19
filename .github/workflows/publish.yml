@@ -79,7 +79,7 @@ jobs:
                 ]
             }
     steps:
-      - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # pin@v2
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # pin@v2
 
       - name: Set up variables (production)
         if: github.event_name != 'pull_request'
@@ -210,7 +210,7 @@ jobs:
       MONITOR_CHART_GIT_HASH: "${{ github.event_name == 'pull_request' &&
         github.event.pull_request.head.sha || github.sha }}"
     steps:
-      - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # pin@v2
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # pin@v2
 
       - name: Install Helm
         uses: azure/setup-helm@18bc76811624f360dbd7f18c2d4ecb32c7b87bab # pin@v1
