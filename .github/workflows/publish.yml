@@ -125,7 +125,7 @@ jobs:
       # cacheHitFiles usage here is just ugly... (and hardcodes only two entries support),
       # but hashFiles does not seem to support nested 'join' call, commas in strings don't work
       - name: Cache Docker layers (production)
-        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # pin@v2
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # pin@v2
         with:
           path: /tmp/.buildx-production-cache
           key: "production-${{ runner.os }}-buildx-${{ env.IMAGE_NAME }}-${{
@@ -140,7 +140,7 @@ jobs:
       # cacheHitFiles usage here is just ugly... (and hardcodes only two entries support),
       # but hashFiles does not seem to support nested 'join' call, commas in strings don't work
       - name: Cache Docker layers (test)
-        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # pin@v2
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # pin@v2
         with:
           path: /tmp/.buildx-test-cache
           key: "test-${{ runner.os }}-buildx-${{ env.IMAGE_NAME }}-${{
